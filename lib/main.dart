@@ -19,7 +19,7 @@ try{
 } catch (e, stack) {
       runApp(ErrorApp(error: e.toString()));
         }
-}
+
 }
 
 class MyApp extends StatelessWidget {
