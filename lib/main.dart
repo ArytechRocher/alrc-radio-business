@@ -6,6 +6,7 @@ import 'package:audio_service/audio_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+try{
   final audioHandler = await AudioService.init(
     builder: () => MyAudioHandler(),
     config: const AudioServiceConfig(
@@ -15,6 +16,10 @@ void main() async {
     ),
   );
   runApp(MyApp(audioHandler: audioHandler));
+} catch (e, stack) {
+      runApp(ErrorApp(error: e.toString()));
+        }
+}
 }
 
 class MyApp extends StatelessWidget {
