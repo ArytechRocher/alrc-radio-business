@@ -8,9 +8,11 @@ workflows:
       vars:
         PACKAGE_NAME: "com.alrc-radio"
     scripts:
+      - name: Delete flutter cache
+        script: flutter clean
       - name: Get Flutter dependences
         script: flutter pub get
       - name: Build APK
         script: flutter build apk --release
     artifacts:
-      - build/app/outputs/flutter-apk/alrc-radio-business.apk
+      - build/app/outputs/flutter-apk/app-release.apk
