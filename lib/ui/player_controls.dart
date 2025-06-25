@@ -14,7 +14,7 @@ class PlayerControls extends StatefulWidget {
 }
 
 class _PlayerControlsState extends State<PlayerControls> {
-  double _volume = 1.0;
+  final double _volume = 1.0;
   bool _isFavorited = false;
   Timer? _sleepTimer;
 
