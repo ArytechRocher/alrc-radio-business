@@ -2,8 +2,10 @@
     
     <application
         android:label="alrc_radio_pro_app"
-        android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:supportsRtl="true" >
         <activity
             android:name="io.flutter.embedding.android.FlutterActivity"
                 android:exported="true"
